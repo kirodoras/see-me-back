@@ -15,4 +15,11 @@ async function findSchedulesByUserId(req: Request, res: Response) {
   res.status(200).send(result);
 }
 
-export { create, findSchedulesByUserId };
+async function deleteById(req: Request, res: Response) {
+  const user_id = +res.locals.user_id;
+  const id = +req.params.id;
+  const result = await schedulesService.deleteById(user_id, id);
+  res.status(200).send(result);
+}
+
+export { create, findSchedulesByUserId, deleteById };
