@@ -13,6 +13,10 @@ schedulesRouter.post(
   schemaValidatorMiddleware.body(scheduleSchema),
   schedulesController.create
 );
-schedulesRouter.get(`${PATH}/findByUserId`, schedulesController.findSchedulesByUserId);
+schedulesRouter.get(
+  `${PATH}/findByUserId`,
+  schedulesController.findSchedulesByUserId
+);
+schedulesRouter.delete(`${PATH}/delete/:id`, schedulesController.deleteById);
 
 export default schedulesRouter;
