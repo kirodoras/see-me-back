@@ -6,4 +6,9 @@ async function create(schedule: TSchedule) {
   return result;
 }
 
-export { create };
+async function findSchedulesByUserId(user_id: number) {
+  const result = await schedulesRepository.findSchedulesByUserId(user_id);
+  return result;
+}
+
+export { create, findSchedulesByUserId };

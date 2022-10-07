@@ -13,5 +13,6 @@ schedulesRouter.post(
   schemaValidatorMiddleware.body(scheduleSchema),
   schedulesController.create
 );
+schedulesRouter.get(`${PATH}/findByUserId`, schedulesController.findSchedulesByUserId);
 
 export default schedulesRouter;
