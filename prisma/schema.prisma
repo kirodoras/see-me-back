@@ -16,5 +16,18 @@ model User {
   name    String
   picture String
 
+  Schedule Schedule[]
+
   @@map("users")
+}
+
+model Schedule {
+  id      Int    @id @default(autoincrement())
+  title   String
+  hours   String
+  user_id Int
+
+  User User @relation(fields: [user_id], references: [id])
+
+  @@map("schedules")
 }
