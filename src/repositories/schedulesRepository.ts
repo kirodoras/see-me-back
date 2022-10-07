@@ -17,4 +17,22 @@ async function findSchedulesByUserId(user_id: number) {
   return result;
 }
 
-export { create, findSchedulesByUserId };
+async function findById(id: number) {
+  const result = await client.schedule.findUnique({
+    where: {
+      id,
+    },
+  });
+  return result;
+}
+
+async function deleteById(id: number) {
+  const result = await client.schedule.delete({
+    where: {
+      id,
+    },
+  });
+  return result;
+}
+
+export { create, findSchedulesByUserId, findById, deleteById };
