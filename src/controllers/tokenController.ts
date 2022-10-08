@@ -12,7 +12,7 @@ function generateToken(req: Request, res: Response) {
   res.header("Access-Control-Allow-Origin", "*");
   const channelName = req.query.channelName as string;
   if (!channelName) {
-    res.status(400).send("channelName is required");
+    throw { type: "unprocessable_entity", message: "Channel name is required" };
   }
   let uid = Number(req.query.uid);
   if (!uid) {
