@@ -2,7 +2,7 @@
   "name": "default",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "./dist/src/server.js",
   "scripts": {
     "build": "tsc && npx prisma migrate deploy",
     "start": "node ./dist/src/server.js",
