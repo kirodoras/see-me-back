@@ -3,3 +3,4 @@
 .env.test
 .vscode
 /dist
+/coverage
