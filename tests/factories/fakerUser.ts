@@ -7,4 +7,10 @@ const fakerUser: TUser = {
   picture: faker.internet.url(),
 };
 
-export { fakerUser };
+const fakerWrongUserEmail: TUser = {
+  email: faker.name.firstName(),
+  name: faker.name.firstName(),
+  picture: faker.internet.url(),
+};
+
+export { fakerUser, fakerWrongUserEmail };
