@@ -9,7 +9,7 @@ beforeEach(() => {
   jest.resetAllMocks();
 });
 
-describe("create user function", () => {
+describe("User Service - create function", () => {
   it("should pass to create new user", async () => {
     const user = fakerUser;
     jest.spyOn(usersRepository, "find").mockImplementationOnce((): any => {
@@ -34,7 +34,7 @@ describe("create user function", () => {
   });
 });
 
-describe("find user function", () => {
+describe("User Service - find function", () => {
   it("should pass to not found user", async () => {
     const user = fakerUser;
     const { email } = user;
