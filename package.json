@@ -11,7 +11,8 @@
     "studio": "npx prisma studio",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
-    "test": "dotenv -e .env.test jest -i --no-cache",
+    "test": "dotenv -e .env.test jest tests/integration -i --no-cache",
+    "test:unit": "dotenv -e .env.test jest tests/unit -i --no-cache",
     "test:migrate": "dotenv -e .env.test prisma migrate dev",
     "test:studio": "dotenv -e .env.test npx prisma studio"
   },
