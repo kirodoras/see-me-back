@@ -11,6 +11,8 @@
     Back end Development Project
     <br />
     <a href="https://github.com/kirodoras/see-me-back/tree/main/src"><strong>Browse TypeScript code</strong></a>
+    </p>
+    <a href="https://github.com/kirodoras/see-me-front"><strong>Front end repository</strong></a>
 </div>
 
 <!-- Built With -->
